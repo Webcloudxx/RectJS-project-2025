@@ -1,0 +1,62 @@
+/* -------------------------
+   AUTH & ENTITY FORMS
+-------------------------- */
+
+.auth-section,
+.form-section {
+  background: var(--bg-light);
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.auth-section h2,
+.form-section h2 {
+  margin-bottom: 20px;
+}
+
+.auth-form,
+.entity-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-form label,
+.entity-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.auth-form input,
+.entity-form input,
+.entity-form textarea {
+  padding: 10px;
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  border: 1px solid #333;
+  color: var(--text);
+  margin-top: 5px;
+  font-size: 0.95rem;
+}
+
+.auth-form input:focus,
+.entity-form input:focus,
+.entity-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px rgba(79, 124, 255, 0.5);
+}
+
+.entity-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.auth-form button,
+.entity-form button {
+  margin-top: 10px;
+  align-self: flex-start;
+}

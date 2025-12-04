@@ -1,0 +1,264 @@
+/* -------------------------
+   GLOBAL DARK THEME
+-------------------------- */
+
+:root {
+  --bg: #0f0f0f;
+  --bg-light: #161616;
+  --bg-card: #1c1c1c;
+  --bg-hover: #242424;
+
+  --text: #e6e6e6;
+  --text-muted: #aaaaaa;
+
+  --primary: #4f7cff;
+  --primary-hover: #6b91ff;
+
+  --danger: #ff4f4f;
+  --danger-hover: #ff6b6b;
+
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.15s ease;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* -------------------------
+   HEADER
+-------------------------- */
+
+.site-header {
+  background: var(--bg-light);
+  padding: 15px 25px;
+  border-bottom: 1px solid #222;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.nav-links,
+.nav-auth {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a,
+.nav-auth a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover,
+.nav-auth a:hover {
+  color: var(--primary);
+}
+
+.welcome {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* -------------------------
+   FOOTER
+-------------------------- */
+
+.site-footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: var(--bg-light);
+  text-align: center;
+  color: var(--text-muted);
+  border-top: 1px solid #222;
+}
+
+/* -------------------------
+   MAIN LAYOUT
+-------------------------- */
+
+.main-content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* -------------------------
+   BUTTONS
+-------------------------- */
+
+button,
+.btn {
+  background: var(--primary);
+  color: white;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover,
+.btn:hover {
+  background: var(--primary-hover);
+}
+
+.btn.danger {
+  background: var(--danger);
+}
+
+.btn.danger:hover {
+  background: var(--danger-hover);
+}
+
+/* -------------------------
+   FORMS
+-------------------------- */
+
+.auth-section,
+.form-section {
+  background: var(--bg-light);
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.auth-form,
+.entity-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-form label,
+.entity-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+.auth-form input,
+.entity-form input,
+.entity-form textarea {
+  padding: 10px;
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  border: 1px solid #333;
+  color: var(--text);
+}
+
+.entity-form textarea {
+  min-height: 120px;
+}
+
+/* -------------------------
+   EVENT CARDS
+-------------------------- */
+
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.event-card {
+  background: var(--bg-card);
+  padding: 15px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.event-card img {
+  width: 100%;
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  object-fit: cover;
+  height: 150px;
+}
+
+.event-card h3 {
+  margin-bottom: 5px;
+}
+
+.event-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* -------------------------
+   DETAILS PAGE
+-------------------------- */
+
+.details-section {
+  background: var(--bg-light);
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.details-section img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 15px;
+}
+
+.owner-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* -------------------------
+   HOME PAGE
+-------------------------- */
+
+.home-section {
+  background: var(--bg-light);
+  padding: 40px;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.home-section h1 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.home-section p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}

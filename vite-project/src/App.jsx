@@ -1,18 +1,18 @@
-import { useState } from 'react'
-import { Routes, Route, Link } from "react-router-dom";
-import Home from './pages/Home';
-import About from './pages/About';
-import './App.css'
+import { AuthProvider } from './contexts/AuthContext.jsx';
+import { AppRouter } from './routes/AppRouter.jsx';
+import { Header } from './components/Header.jsx';
+import { Footer } from './components/Footer.jsx';
 
-function App() {
-    return (
-    <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />}/>
-      </Routes>
-    </>
+export default function App() {
+  return (
+    <AuthProvider>
+      <div className="app">
+        <Header />
+        <main className="main-content">
+          <AppRouter />
+        </main>
+        <Footer />
+      </div>
+    </AuthProvider>
   );
 }
-
-export default App

@@ -1,0 +1,74 @@
+/* -------------------------
+   HEADER / NAVBAR
+-------------------------- */
+
+.site-header {
+  background: var(--bg-light);
+  padding: 15px 25px;
+  border-bottom: 1px solid #222;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.nav-links,
+.nav-auth {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+}
+
+.nav-links a,
+.nav-auth a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover,
+.nav-auth a:hover {
+  color: var(--primary);
+}
+
+/* Active link (NavLink gives .active) */
+.nav-links a.active,
+.nav-auth a.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 2px;
+}
+
+.welcome {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Mobile-ish */
+
+@media (max-width: 768px) {
+  .site-header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links,
+  .nav-auth {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+}
