@@ -9,7 +9,7 @@ export function Header() {
     <header className="site-header">
       <nav>
         <Link to="/" className="logo">
-          CarMeetHub
+            Car meet hub
         </Link>
 
         <ul className="nav-links">
